@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>python-gardenlinux-lib documentation &mdash; python-gardenlinux-lib  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            python-gardenlinux-lib
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">python-gardenlinux-lib documentation</a><ul>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.construct_layer_metadata"><code class="docutils literal notranslate"><span class="pre">construct_layer_metadata()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.deduce_archive_filetype"><code class="docutils literal notranslate"><span class="pre">deduce_archive_filetype()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.deduce_feature_name"><code class="docutils literal notranslate"><span class="pre">deduce_feature_name()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.deduce_filetype_from_string"><code class="docutils literal notranslate"><span class="pre">deduce_filetype_from_string()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.deduce_image_filetype"><code class="docutils literal notranslate"><span class="pre">deduce_image_filetype()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.get_features_dict"><code class="docutils literal notranslate"><span class="pre">get_features_dict()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.get_gardenlinux_commit"><code class="docutils literal notranslate"><span class="pre">get_gardenlinux_commit()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.get_oci_metadata"><code class="docutils literal notranslate"><span class="pre">get_oci_metadata()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.lookup_media_type_for_filetype"><code class="docutils literal notranslate"><span class="pre">lookup_media_type_for_filetype()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.parse_feature_yaml"><code class="docutils literal notranslate"><span class="pre">parse_feature_yaml()</span></code></a></li>
+<li><a class="reference internal" href="#python_gardenlinux_lib.parse_features.read_feature_files"><code class="docutils literal notranslate"><span class="pre">read_feature_files()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">python-gardenlinux-lib</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">python-gardenlinux-lib documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-gardenlinux-lib-documentation">
+<h1>python-gardenlinux-lib documentation<a class="headerlink" href="#python-gardenlinux-lib-documentation" title="Link to this heading"></a></h1>
+<dl class="py function" id="module-python_gardenlinux_lib.parse_features">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.construct_layer_metadata">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">construct_layer_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filetype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.construct_layer_metadata" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filetype</strong> (<em>str</em>) – filetype of blob</p></li>
+<li><p><strong>cname</strong> (<em>str</em>) – the cname of the target image</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – the version of the target image</p></li>
+<li><p><strong>arch</strong> (<em>str</em>) – the arch of the target image</p></li>
+<li><p><strong>commit</strong> (<em>str</em>) – commit of the garden linux source</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict of oci layer metadata for a given layer file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.deduce_archive_filetype">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">deduce_archive_filetype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.deduce_archive_filetype" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>feature_dir</strong> (<em>str</em>) – Directory of single Feature</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>str of filetype for archive</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.deduce_feature_name">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">deduce_feature_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.deduce_feature_name" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>feature_dir</strong> (<em>str</em>) – Directory of single Feature</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>string of feature name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.deduce_filetype_from_string">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">deduce_filetype_from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">script_base_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.deduce_filetype_from_string" title="Link to this definition"></a></dt>
+<dd><p>Garden Linux features can optionally have a image.&lt;filetype&gt; or convert.&lt;filetype&gt; script,
+where the &lt;filetype&gt; indicates the target filetype.</p>
+<p>image.&lt;filetype&gt; script converts the .tar to &lt;filetype&gt; archive.</p>
+<p>convert.&lt;filetype&gt; script converts the .raw to &lt;filetype&gt; image type.</p>
+<p>Both scripts are bash scripts invoked by the builder, but this function does only read the file ending</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>feature_dir</strong> (<em>str</em>) – feature directory of garden linux</p></li>
+<li><p><strong>script_base_name</strong> (<em>str</em>) – typically it is either image or convert</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of available filetypes deduced on the available script_base_name.&lt;filetype&gt;</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.deduce_image_filetype">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">deduce_image_filetype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.deduce_image_filetype" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>feature_dir</strong> (<em>str</em>) – Directory of single Feature</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>str of filetype for image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.get_features_dict">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">get_features_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gardenlinux_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.get_features_dict" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cname</strong> (<em>str</em>) – the target cname to get the feature dict for</p></li>
+<li><p><strong>gardenlinux_root</strong> (<em>str</em>) – path of garden linux src root</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict with list of features for a given cname, split into platform, element and flag</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.get_gardenlinux_commit">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">get_gardenlinux_commit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gardenlinux_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.get_gardenlinux_commit" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>gardenlinux_root</strong> (<em>str</em>) – path to garden linux src</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>output of get_commit script from gardenlinux src</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.get_oci_metadata">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">get_oci_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gardenlinux_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.get_oci_metadata" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cname</strong> (<em>str</em>) – the target cname of the image</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – the target version of the image</p></li>
+<li><p><strong>gardenlinux_root</strong> (<em>str</em>) – path of garden linux src root</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of dicts, where each dict represents a layer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.lookup_media_type_for_filetype">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">lookup_media_type_for_filetype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filetype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.lookup_media_type_for_filetype" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filetype</strong> (<em>str</em>) – filetype of the target layer</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>mediatype</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.parse_feature_yaml">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">parse_feature_yaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_yaml_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.parse_feature_yaml" title="Link to this definition"></a></dt>
+<dd><p>Legacy function copied from gardenlinux/builder</p>
+<p>extracts the feature name from the feature_yaml_file param,
+reads the info.yaml into a dict and outputs a dict containing the cname and the info yaml</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>feature_yaml_file</strong> (<em>str</em>) – path to the target info.yaml that must be read</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_gardenlinux_lib.parse_features.read_feature_files">
+<span class="sig-prename descclassname"><span class="pre">python_gardenlinux_lib.parse_features.</span></span><span class="sig-name descname"><span class="pre">read_feature_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_gardenlinux_lib.parse_features.read_feature_files" title="Link to this definition"></a></dt>
+<dd><p>Legacy function copied from gardenlinux/builder</p>
+<p>TODO: explain the structure of the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>feature_dir</strong> (<em>str</em>) – feature directory to create the graph for</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>an networkx based feature graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, gardenlinux maintainer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
